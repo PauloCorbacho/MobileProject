@@ -7,10 +7,7 @@ public class LoginTests extends PageLogin {
 
     @Test
     public void realizarLogin() {
-        cpfCpnj.sendKeys("");
-        senha.sendKeys("");
-        acessarMinhaConta.click();
-        //assert com a validação
+
     }
 
     @Test

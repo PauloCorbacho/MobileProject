@@ -1,6 +1,7 @@
+package tests;
+
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import tests.LoginTests;
 
 @RunWith(Suite.class) //Informa ao JUnit que a execução é do tipo suíte, ou seja, irá executar diversos testes.
 @Suite.SuiteClasses({LoginTests.class}) //Informa quais classes de testes serão executadas.
