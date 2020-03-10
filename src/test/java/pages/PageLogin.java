@@ -2,8 +2,9 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import setup.AppiumConfig;
 
-public class PageLogin {
+public class PageLogin extends AppiumConfig {
 
     @FindBy(xpath = "//android.widget.TextView[@content-desc='buttonLogin']")
     protected WebElement jaSouCadastradoButton;

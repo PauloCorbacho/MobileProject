@@ -2,8 +2,9 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import setup.AppiumConfig;
 
-public class PageTransactions {
+public class PageTransactions extends AppiumConfig {
 
     @FindBy(xpath = "")
     protected WebElement colocarDinheiro;

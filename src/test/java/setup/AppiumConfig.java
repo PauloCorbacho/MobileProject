@@ -3,6 +3,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import io.appium.java_client.android.AndroidElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.AppiumDriver;
@@ -10,10 +11,11 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.remote.MobilePlatform;
+import tests.BaseTest;
 import util.Utils;
 
 @SuppressWarnings("rawtypes")
-public class AppiumConfig {
+public class AppiumConfig extends BaseTest {
 
     public static AndroidDriver androidDriver;
     public static IOSDriver iosDriver;
@@ -42,9 +44,11 @@ public class AppiumConfig {
         cap.setCapability(MobileCapabilityType.APP, new File(Utils.readPropertyArchive("app.android.path")).getAbsolutePath());
         cap.setCapability(MobileCapabilityType.PLATFORM_NAME, MobilePlatform.ANDROID);
         cap.setCapability(MobileCapabilityType.DEVICE_NAME, Utils.readPropertyArchive("device.android.name"));
-        cap.setCapability(MobileCapabilityType.FULL_RESET, true);
+        cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, Utils.readPropertyArchive("platform.android.version"));
         cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60 * 2);
-
+        cap.setCapability("appPackage","com.donus.homolog");
+        cap.setCapability("appActivity", "com.donus.MainActivity");
+        cap.setCapability(MobileCapabilityType.FULL_RESET, true);
         return androidDriver = new AndroidDriver(new URL("http://" + Utils.readPropertyArchive("address") + ":" + Utils.readPropertyArchive("port") + "/wd/hub"), cap);
     }
 

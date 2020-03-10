@@ -2,9 +2,9 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import setup.Setup;
+import setup.AppiumConfig;
 
-public class PageHome extends Setup {
+public class PageHome extends AppiumConfig {
 
     @FindBy(xpath = "")
     protected WebElement abaTransacoes;
