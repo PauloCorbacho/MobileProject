@@ -1,28 +1,51 @@
 package pages;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 
-public class PageLogin {
+public class PageLogin extends PageObject {
+    public PageLogin(AppiumDriver<?> driver) {
+        super(driver);
+    }
 
-    @FindBy(xpath = "//android.widget.TextView[@content-desc='buttonLogin']")
-    protected WebElement jaSouCadastradoButton;
+    @AndroidFindBy(xpath = "[//android.widget.textButton[@content-desc='CADASTRADO']")
+    //@AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='buttonLogin']")
+    protected MobileElement jaSouCadastradoButton;
 
-    @FindBy(xpath = "//android.widget.TextView[@content-desc='buttonSignUp']")
-    protected WebElement queroMeCadastrar;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='buttonSignUp']")
+    protected MobileElement queroMeCadastrar;
 
-    @FindBy(xpath = "")
-    protected WebElement cpfCpnj;
+    @AndroidFindBy(xpath = "")
+    protected MobileElement campoCpfCpnj;
+//
+    @AndroidFindBy(xpath = "")
+    protected MobileElement campoSenha;
+//
+//    @AndroidFindBy(xpath = "")
+//    protected MobileElement acessarMinhaConta;
+//
+//    @AndroidFindBy(xpath = "")
+//    protected MobileElement criarMinhaConta;
 
-    @FindBy(xpath = "")
-    protected WebElement senha;
+//    @AndroidFindBy(xpath = "")
+//    protected MobileElement esqueciMinhaSenha;
 
-    @FindBy(xpath = "")
-    protected WebElement acessarMinhaConta;
+    public void acessarATelaDeLogin(){
+        jaSouCadastradoButton.click();
+    }
 
-    @FindBy(xpath = "")
-    protected WebElement criarMinhaConta;
+    public void preencherCpfCnpj(String cpfCnpj){
+        campoCpfCpnj.sendKeys(cpfCnpj);
+    }
 
-    @FindBy(xpath = "")
-    protected WebElement esqueciMinhaSenha;
+    public void preencherSenha(String senha){
+        campoSenha.sendKeys(senha);
+    }
+
+    public void enviarDadosDelogin(String cpfCnpj, String senha){
+            campoCpfCpnj.sendKeys(cpfCnpj);
+            campoSenha.sendKeys(senha);
+    }
+
 }
