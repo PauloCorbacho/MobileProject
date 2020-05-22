@@ -1,5 +1,6 @@
 package steps;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -12,11 +13,23 @@ import setup.TestRunner;
 public class StepsLogin {
     protected AppiumDriver<?> driver = TestRunner.driver;
     @Test
-    @Given("^eu estou na tela de login$")
-    public void euEstouNaTelaDeLogin() {
+
+    @Given("^I'm at the login screen$")
+    public void iMAtTheLoginScreen() {
         PageLogin pageLogin = new PageLogin(driver);
         pageLogin.acessarATelaDeLogin();
     }
+    @And("^I send a user \"([^\"]*)\"$")
+    public void iSendAUser(String user) throws Throwable {
+        PageLogin pageLogin = new PageLogin(driver);
+        pageLogin.preencherCpfCnpj(user);
+    }
+
+    @And("^envio um usuario \"([^\"]*)\"$")
+    public void envioUmUsuario() throws Throwable {
+
+    }
+
     @Test
     @And("^envio um usuario e senha validos$")
     public void envioUmUsuarioESenhaValidos() {
@@ -24,32 +37,31 @@ public class StepsLogin {
         pageLogin.enviarDadosDelogin("","");
     }
 
-    @Test
-    @When("^clico no botão entrar$")
-    public void clicoNoBotãoEntrar() {
-       // acessarMinhaConta.click();
-    }
-
-    @Test
-    @Then("^o login deverá ser feito$")
-    public void oLoginDeveráSerFeito() {
-        //assert com a validação
-    }
-
-    @And("^envio um usuario \"([^\"]*)\"$")
-    public void envioUmUsuario(String usuario) throws Throwable {
-        PageLogin pageLogin = new PageLogin(driver);
-        pageLogin.preencherCpfCnpj(usuario);
-    }
-
-    @And("^envio uma senha \"([^\"]*)\"$")
-    public void envioUmaSenha(String senha) throws Throwable {
-        PageLogin pageLogin = new PageLogin(driver);
-        pageLogin.preencherSenha(senha);
-    }
 
     @Then("^o login não deverá ser feito$")
     public void oLoginNãoDeveráSerFeito() {
+        //Assert com a validação
+    }
+
+
+    @And("^send a password \"([^\"]*)\"$")
+    public void sendAPassword(String password) throws Throwable {
+        PageLogin pageLogin = new PageLogin(driver);
+        pageLogin.preencherSenha(password);
+    }
+
+    @When("^I click the enter button$")
+    public void iClickTheEnterButton() {
+        // acessarMinhaConta.click();
+    }
+
+    @Then("^the login must be done$")
+    public void theLoginMustBeDone() {
+        //Assert com a validação
+    }
+
+    @Then("^login should not be done$")
+    public void loginShouldNotBeDone() {
         //Assert com a validação
     }
 }

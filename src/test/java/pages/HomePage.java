@@ -7,18 +7,9 @@ import setup.AppiumConfig;
 
 public class HomePage extends AppiumConfig {
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "[//android.widget.textButton[@content-desc='trnsacoes']")
     protected WebElement abaTransacoes;
-
-    @FindBy (xpath = "")
-    protected WebElement abaExtrato;
-
-    @FindBy(xpath = "")
-    protected WebElement abaMeuNegocio;
-
-    @FindBy(xpath = "")
-    protected WebElement abaAjuda;
-
+    
     public HomePage(AppiumDriver<?> driver) {
     }
 }
