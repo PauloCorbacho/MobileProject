@@ -45,8 +45,8 @@ public class AppiumConfig {
         cap.setCapability(MobileCapabilityType.DEVICE_NAME, Utils.readPropertyArchive("device.android.name"));
         cap.setCapability(MobileCapabilityType.PLATFORM_VERSION, Utils.readPropertyArchive("platform.android.version"));
         cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60 * 2);
-        cap.setCapability("appPackage","com.donus.homolog");
-        cap.setCapability("appActivity", "com.donus.MainActivity");
+        cap.setCapability("appPackage","");
+        cap.setCapability("appActivity", "");
         cap.setCapability(MobileCapabilityType.FULL_RESET, false);
         return androidDriver = new AndroidDriver(new URL("http://" + Utils.readPropertyArchive("address") + ":" + Utils.readPropertyArchive("port") + "/wd/hub"), cap);
     }
