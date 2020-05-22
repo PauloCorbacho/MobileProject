@@ -18,8 +18,8 @@ To use the project, it is necessary to clone the repository in the local environ
 
 ### Running the tests
 
-To run the tests just run the class Run AllTests
-src / test / java / setup > TestRunner
+To run the tests just run the class TestRunner
+src / test / java / setup 
 
 ### testing standard
 
