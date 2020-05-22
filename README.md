@@ -1,16 +1,14 @@
-# Mobile
+# API
 
 ### Technologies:
 Java > Maven > Junit   
-Cucumber BDD > Selenium  
-Appium 
-Android Studio
+Jbehave BDD
+Rest Assured 
+Lombok
+
 
 ### Prerequisites
-
 IDE java  
-SDK file
-Device 
 
 ### Installing 
 
@@ -18,12 +16,14 @@ To use the project, it is necessary to clone the repository in the local environ
 
 ### Running the tests
 
-To run the tests just run the class TestRunner
-src / test / java / setup 
+To run the tests just run the class JBehaveRunner
+src / test / java / tests 
 
 ### testing standard
 
-This project contains the necessary settings to run tests using selenium and appium;
+This project contaiThis project is done to test APIs using BDD (jbehave);
+I use models to fill in the fields of json and I have classes that parse and deal with HTTP Methods,
+which is where I enter all the necessary information to complete a request, such as headers, authorization, body, url ...ns the necessary settings to run tests using selenium and appium;
 
 ### Build
 
