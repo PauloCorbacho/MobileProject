@@ -1,15 +1,19 @@
 # MOBILE
 
 ### Technologies:
-Java 
-Maven 
-Cucumber    
-Selenium
-Appium
-Android Studio
+* Java 
+* Maven 
+* Cucumber    
+* Selenium
+* Appium
+* Android Studio
 
 ### Prerequisites
-IDE java  
+* IDE java  
+* Android Studio 
+* Appium
+* SDK
+* APk
 
 ### Installing 
 
@@ -37,5 +41,3 @@ https://github.com
 **Paulo Corbacho** - [GitHub](https://github.com/PauloCorbacho)
 
 ### License
-
-
