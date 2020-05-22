@@ -1,4 +1,4 @@
-# MOBILE
+# mobile-java-cucumber
 
 ### Technologies:
 * Java 
