@@ -21,7 +21,7 @@ public class StepsLogin {
     @And("^envio um usuario e senha validos$")
     public void envioUmUsuarioESenhaValidos() {
         PageLogin pageLogin = new PageLogin(driver);
-        pageLogin.enviarDadosDelogin("84923210087","301955");
+        pageLogin.enviarDadosDelogin("","");
     }
 
     @Test

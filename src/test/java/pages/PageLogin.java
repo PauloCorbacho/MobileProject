@@ -10,7 +10,6 @@ public class PageLogin extends PageObject {
     }
 
     @AndroidFindBy(xpath = "[//android.widget.textButton[@content-desc='CADASTRADO']")
-    //@AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='buttonLogin']")
     protected MobileElement jaSouCadastradoButton;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='buttonSignUp']")
@@ -18,18 +17,18 @@ public class PageLogin extends PageObject {
 
     @AndroidFindBy(xpath = "")
     protected MobileElement campoCpfCpnj;
-//
+
     @AndroidFindBy(xpath = "")
     protected MobileElement campoSenha;
-//
-//    @AndroidFindBy(xpath = "")
-//    protected MobileElement acessarMinhaConta;
-//
-//    @AndroidFindBy(xpath = "")
-//    protected MobileElement criarMinhaConta;
 
-//    @AndroidFindBy(xpath = "")
-//    protected MobileElement esqueciMinhaSenha;
+    @AndroidFindBy(xpath = "")
+    protected MobileElement acessarMinhaConta;
+
+    @AndroidFindBy(xpath = "")
+    protected MobileElement criarMinhaConta;
+
+    @AndroidFindBy(xpath = "")
+    protected MobileElement esqueciMinhaSenha;
 
     public void acessarATelaDeLogin(){
         jaSouCadastradoButton.click();
